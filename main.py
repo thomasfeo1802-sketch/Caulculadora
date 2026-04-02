@@ -21,6 +21,8 @@ def calcular():
                     messagebox.showerror("Erro", "Divisão por zero!")
                     return
                 result = num1 / num2
+            case "**":
+                result = num1 ** num2
             case _:
                 messagebox.showwarning("Aviso", "Operação inválida! Use +, -, * ou /")
                 return
@@ -47,7 +49,7 @@ tk.Label(janela, text="Número 2:").pack()
 entry2 = tk.Entry(janela)
 entry2.pack()
 
-tk.Label(janela, text="Operação (+, -, *, /):").pack()
+tk.Label(janela, text="Operação (+, -, *, /, **):").pack()
 opEntry = tk.Entry(janela)
 opEntry.pack()
 
